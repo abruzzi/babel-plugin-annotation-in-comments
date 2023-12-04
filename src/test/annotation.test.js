@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'node:path';
 
 import { pluginTester } from 'babel-plugin-tester';
-import analyticsPlugin from '../analytics.js';
+import analyticsPlugin from '../annotation';
 
 pluginTester({
   babelrc: false,
