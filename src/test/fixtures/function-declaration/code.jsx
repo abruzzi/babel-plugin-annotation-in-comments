@@ -1,13 +1,13 @@
 import React from 'react';
 
-const MenuItem = () => {
-  // @operational("menuitem clicked")
+const MenuItem = (id) => {
+  // @operational("menu clicked")
   function handleClick(e) {
-    console.log(e.target.value);
+    dispatch({type: "ADD_ITEM"})
   }
 
   return <div>
-    <button onClick={handleClick}>Click me</button>
+    <button onClick={() => handleClick(id)}>Add to bucket</button>
   </div>
 }
 

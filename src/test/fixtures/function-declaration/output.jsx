@@ -1,14 +1,16 @@
 import { fireUIEvent } from "@abc/analytics";
 import React from "react";
-const MenuItem = () => {
-  // @operational("menuitem clicked")
+const MenuItem = (id) => {
+  // @operational("menu clicked")
   function handleClick(e) {
-    fireUIEvent("menuitem clicked");
-    console.log(e.target.value);
+    fireUIEvent("menu clicked");
+    dispatch({
+      type: "ADD_ITEM",
+    });
   }
   return (
     <div>
-      <button onClick={handleClick}>Click me</button>
+      <button onClick={() => handleClick(id)}>Add to bucket</button>
     </div>
   );
 };
