@@ -1,8 +1,8 @@
 import React from 'react';
 
 const MenuItem = () => {
-  // @operational("menuitem clicked")
-  // @experiment("workflow.template")
+  // @operational("menu", "clicked", "menuItem")
+  // @experiment("workflowTemplate")
   function handleClick(e) {
     console.log(e.target.value);
   }

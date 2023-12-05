@@ -6,7 +6,7 @@ function Quotes() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // @operational("fetchQuotes")
+    // @operational("fetchQuotes", "", "")
     const fetchQuotes = async () => {
       setIsLoading(true);
       try {

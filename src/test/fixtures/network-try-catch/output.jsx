@@ -1,13 +1,19 @@
-import { fireUIEvent } from "@abc/analytics";
+import { fireOperationalAnalytics, createAnalyticsEvent } from "@abc/analytics";
 import React, { useEffect, useState } from "react";
 function Quotes() {
   const [quotes, setQuotes] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   useEffect(() => {
-    // @operational("fetchQuotes")
+    // @operational("fetchQuotes", "", "")
     const fetchQuotes = async () => {
-      fireUIEvent("fetchQuotes");
+      fireOperationalAnalytics(
+        createAnalyticsEvent({
+          actionSubject: "fetchQuotes",
+          action: "",
+          actionSubjectId: "",
+        })
+      );
       setIsLoading(true);
       try {
         const response = await fetch("https://quote-service.com/quotes");

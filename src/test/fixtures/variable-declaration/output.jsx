@@ -1,9 +1,15 @@
-import { fireUIEvent } from "@abc/analytics";
+import { fireOperationalAnalytics, createAnalyticsEvent } from "@abc/analytics";
 import React from "react";
 const MenuItem = () => {
-  // @operational("menuitem clicked")
+  // @operational("clicked", "menuitem", "")
   const handleClick = (e) => {
-    fireUIEvent("menuitem clicked");
+    fireOperationalAnalytics(
+      createAnalyticsEvent({
+        actionSubject: "clicked",
+        action: "menuitem",
+        actionSubjectId: "",
+      })
+    );
     console.log(e.target.value);
   };
   return (

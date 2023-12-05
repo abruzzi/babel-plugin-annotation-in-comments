@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MenuItem = (id) => {
-  // @operational("menu clicked")
+  // @operational("menu", "clicked", "menuItem")
   function handleClick(e) {
     dispatch({type: "ADD_ITEM"})
   }

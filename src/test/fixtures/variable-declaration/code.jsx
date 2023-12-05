@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MenuItem = () => {
-  // @operational("menuitem clicked")
+  // @operational("clicked", "menuitem", "")
   const handleClick = (e) => {
     console.log(e.target.value);
   }

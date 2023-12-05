@@ -1,10 +1,16 @@
-import { fireUIEvent } from "@abc/analytics";
+import { fireOperationalAnalytics, createAnalyticsEvent } from "@abc/analytics";
 import React from "react";
 const MenuItem = () => {
-  // @operational("menuitem clicked")
-  // @experiment("workflow.template")
+  // @operational("menu", "clicked", "menuItem")
+  // @experiment("workflowTemplate")
   function handleClick(e) {
-    fireUIEvent("menuitem clicked");
+    fireOperationalAnalytics(
+      createAnalyticsEvent({
+        actionSubject: "menu",
+        action: "clicked",
+        actionSubjectId: "menuItem",
+      })
+    );
     console.log(e.target.value);
   }
   return (

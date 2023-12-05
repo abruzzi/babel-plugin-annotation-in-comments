@@ -18,6 +18,7 @@
     "@babel/plugin-syntax-jsx": "^7.23.3",
     "@babel/preset-env": "^7.23.5",
     "@babel/preset-react": "^7.23.3",
+    "@babel/template": "^7.22.15",
     "@babel/traverse": "^7.23.5",
     "babel-cli": "^6.26.0",
     "babel-plugin-tester": "^11.0.4",
